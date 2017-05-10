@@ -19,7 +19,7 @@ class WeatherFetch {
         let session = URLSession.shared
         
         let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
-        
+        //Testing the user
         // The data task retrieves the data.
         let dataTask = session.dataTask(with: weatherRequestURL) {
             (data:Data?, response:URLResponse?, error:Error?) in
