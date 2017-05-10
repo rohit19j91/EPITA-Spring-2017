@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246CD6FE1EC381FD0048EAC7 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CD6FD1EC381FD0048EAC7 /* JsonParser.swift */; };
 		3C0B8CC21EA7FD9700F93394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8CC11EA7FD9700F93394 /* AppDelegate.swift */; };
 		3C0B8CC41EA7FD9700F93394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8CC31EA7FD9700F93394 /* ViewController.swift */; };
 		3C0B8CC71EA7FD9700F93394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8CC51EA7FD9700F93394 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		246CD6FD1EC381FD0048EAC7 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		3C0B8CBE1EA7FD9700F93394 /* Advanced iOS Spring 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced iOS Spring 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0B8CC11EA7FD9700F93394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C0B8CC31EA7FD9700F93394 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				3C0B8CC11EA7FD9700F93394 /* AppDelegate.swift */,
 				3C0B8CC31EA7FD9700F93394 /* ViewController.swift */,
 				3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */,
+				246CD6FD1EC381FD0048EAC7 /* JsonParser.swift */,
 				3C0B8CC51EA7FD9700F93394 /* Main.storyboard */,
 				3C0B8CC81EA7FD9700F93394 /* Assets.xcassets */,
 				3C0B8CCA1EA7FD9700F93394 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 			files = (
 				3C0B8CC41EA7FD9700F93394 /* ViewController.swift in Sources */,
 				3C0B8CC21EA7FD9700F93394 /* AppDelegate.swift in Sources */,
+				246CD6FE1EC381FD0048EAC7 /* JsonParser.swift in Sources */,
 				3C30FDBF1EB2825700225C75 /* WeatherFetch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

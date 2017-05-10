@@ -32,8 +32,11 @@ class WeatherFetch {
                 print("Raw data:\n\(data!)\n")
                 let dataString = String(data: data!, encoding: String.Encoding.utf8)
                 print("Human-readable data:\n\(dataString!)")
+                let check=JsonParser()
+                check.parseJson(cities: data!)
             }
         }
         dataTask.resume()
     }
+    
 }
