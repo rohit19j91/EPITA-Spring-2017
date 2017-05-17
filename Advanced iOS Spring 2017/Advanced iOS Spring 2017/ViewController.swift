@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Added the UI Labels code here
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var City: UILabel!
 }
