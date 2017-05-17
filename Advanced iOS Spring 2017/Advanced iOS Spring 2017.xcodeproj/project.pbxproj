@@ -15,6 +15,8 @@
 		3C0B8CCC1EA7FD9700F93394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8CCA1EA7FD9700F93394 /* LaunchScreen.storyboard */; };
 		3C0B8CD71EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8CD61EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift */; };
 		3C30FDBF1EB2825700225C75 /* WeatherFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */; };
+		4EF9F4DE1ECCB3D80038ECE1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9F4DD1ECCB3D80038ECE1 /* Weather.swift */; };
+		4EF9F4E21ECCC3F50038ECE1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF9F4E11ECCC3F50038ECE1 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		3C0B8CD61EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_iOS_Spring_2017Tests.swift; sourceTree = "<group>"; };
 		3C0B8CD81EA7FD9700F93394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetch.swift; sourceTree = "<group>"; };
+		4EF9F4DD1ECCB3D80038ECE1 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		4EF9F4E11ECCC3F50038ECE1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +89,12 @@
 				3C0B8CC31EA7FD9700F93394 /* ViewController.swift */,
 				3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */,
 				246CD6FD1EC381FD0048EAC7 /* JsonParser.swift */,
+				4EF9F4DD1ECCB3D80038ECE1 /* Weather.swift */,
 				3C0B8CC51EA7FD9700F93394 /* Main.storyboard */,
 				3C0B8CC81EA7FD9700F93394 /* Assets.xcassets */,
 				3C0B8CCA1EA7FD9700F93394 /* LaunchScreen.storyboard */,
 				3C0B8CCD1EA7FD9700F93394 /* Info.plist */,
+				4EF9F4E11ECCC3F50038ECE1 /* TableViewController.swift */,
 			);
 			path = "Advanced iOS Spring 2017";
 			sourceTree = "<group>";
@@ -206,9 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0B8CC41EA7FD9700F93394 /* ViewController.swift in Sources */,
+				4EF9F4E21ECCC3F50038ECE1 /* TableViewController.swift in Sources */,
 				3C0B8CC21EA7FD9700F93394 /* AppDelegate.swift in Sources */,
 				246CD6FE1EC381FD0048EAC7 /* JsonParser.swift in Sources */,
 				3C30FDBF1EB2825700225C75 /* WeatherFetch.swift in Sources */,
+				4EF9F4DE1ECCB3D80038ECE1 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

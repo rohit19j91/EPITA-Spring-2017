@@ -11,12 +11,21 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        let weather_ch = Weather(city: "Paris",temperature: 32, picture: nil)
+        //weather.init("Paris",32,nill)
         
-        let weather = WeatherFetch()
-        weather.getWeather(city: "Paris")
+        print(weather_ch!.city)
+        print(weather_ch!.temperature)
+        temperature.text=String(weather_ch!.temperature)
+        City.text=weather_ch?.city
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,5 +36,6 @@ class ViewController: UIViewController {
     //Added the UI Labels code here
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var City: UILabel!
-}
+    
+    }
 
