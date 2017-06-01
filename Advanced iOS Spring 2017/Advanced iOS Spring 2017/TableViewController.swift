@@ -50,13 +50,24 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text=weatherArray[indexPath.row].city
-        cell.detailTextLabel?.text=String(weatherArray[indexPath.row].temperature)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as?WeatherTableViewCell else {fatalError("error")}
+        cell.CityName?.text=weatherArray[indexPath.row].city
+        cell.Temperature?.text=String(weatherArray[indexPath.row].temperature)
         return cell
+        }
+    
+
+    @IBAction func unwind(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? WeatherAdd, let weather=sourceViewController.weather
+        {
+            
+            let newIndexPath=IndexPath(row: weatherArray.count, section: 0)
+            weatherArray.append(weather)
+            tableView.insertRows(at: [newIndexPath],with: .automatic)
+        }
     }
+
+}
 
     /*
     // Override to support conditional editing of the table view.
@@ -103,4 +114,4 @@ class TableViewController: UITableViewController {
     }
     */
 
-}
+
