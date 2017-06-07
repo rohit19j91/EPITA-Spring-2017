@@ -47,12 +47,16 @@ class WeatherAdd: UIViewController {
             //User cancelled the action
             let city = CityText.text
             let temperature = Int(self.temperature.text!)
-            weather = Weather(city: city!,temperature:temperature!, picture: nil)
+        
+        
+            
+            weather = Weather(city: city!,temperature:temperature!, picture: UIImage(named: "image\(arc4random_uniform(3) + 1)" )!)
     
    
-    }
 }
-    /*
+}
+
+/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

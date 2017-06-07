@@ -16,12 +16,11 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
         
-        weatherArray.append(Weather(city:"Amsterdam",temperature:24, picture: nil)!)
-        weatherArray.append(Weather(city:"Nice",temperature:30, picture: nil)!)
-        weatherArray.append(Weather(city:"Copenhagen",temperature:21, picture: nil)!)
-        weatherArray.append(Weather(city:"Berlin",temperature:20, picture: nil)!)
-        weatherArray.append(Weather(city:"Nice",temperature:18, picture: nil)!)
-        
+        weatherArray.append(Weather(city:"Amsterdam",temperature:24, picture: UIImage(named: "image1"))!)
+        weatherArray.append(Weather(city:"Nice",temperature:30, picture: UIImage(named: "image3"))!)
+        weatherArray.append(Weather(city:"Copenhagen",temperature:21, picture: UIImage(named: "image2"))!)
+        weatherArray.append(Weather(city:"Berlin",temperature:20, picture: UIImage(named: "Image-1.jpeg"))!)
+        weatherArray.append(Weather(city:"Nice",temperature:18, picture: UIImage(named: "image1"))!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,6 +52,7 @@ class TableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as?WeatherTableViewCell else {fatalError("error")}
         cell.CityName?.text=weatherArray[indexPath.row].city
         cell.Temperature?.text=String(weatherArray[indexPath.row].temperature)
+        cell.ImageCell.image = weatherArray[indexPath.row].picture
         return cell
         }
     

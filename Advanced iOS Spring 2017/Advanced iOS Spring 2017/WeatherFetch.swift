@@ -27,6 +27,10 @@ class WeatherFetch {
                 // Server has returned an error
                 print("Error:\n\(error)")
             }
+            
+            
+            
+            
             else {
                 // Server has returned data
                 print("Raw data:\n\(data!)\n")
