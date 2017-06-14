@@ -16,7 +16,7 @@ class WeatherAdd: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "orangetry")!)
         // Do any additional setup after loading the view.
     }
 

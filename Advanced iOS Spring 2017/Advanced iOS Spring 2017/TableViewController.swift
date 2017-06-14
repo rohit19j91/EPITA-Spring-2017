@@ -15,14 +15,14 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "orangetry")!)
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundpages")!)
 
         
         weatherArray.append(Weather(city:"Amsterdam",temperature:24, picture: UIImage(named: "image1"))!)
         weatherArray.append(Weather(city:"Nice",temperature:30, picture: UIImage(named: "image3"))!)
         weatherArray.append(Weather(city:"Copenhagen",temperature:21, picture: UIImage(named: "image2"))!)
-        weatherArray.append(Weather(city:"Berlin",temperature:20, picture: UIImage(named: "Image-1.jpeg"))!)
-        weatherArray.append(Weather(city:"Nice",temperature:18, picture: UIImage(named: "image1"))!)
+        weatherArray.append(Weather(city:"Berlin",temperature:20, picture: UIImage(named: "image4.jpeg"))!)
+        weatherArray.append(Weather(city:"Nice",temperature:18, picture: UIImage(named: "image5"))!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,7 +52,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as?WeatherTableViewCell else {fatalError("error")}
-        cell.backgroundView = UIImageView(image: UIImage(named: "rowtry")!)
+        cell.backgroundView = UIImageView(image: UIImage(named: "backgroundrows")!)
         cell.CityName?.text=weatherArray[indexPath.row].city
         cell.Temperature?.text=String(weatherArray[indexPath.row].temperature)
         cell.ImageCell.image = weatherArray[indexPath.row].picture
@@ -68,70 +68,37 @@ class TableViewController: UITableViewController {
         }
     }
 
+    //This function helps in selecting the row on the table view
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        indexin = indexPath.row
-        performSegue(withIdentifier: "transferdetails", sender: weatherArray[indexin])
-
-//        let dispvw = storyboard?.instantiateViewController(withIdentifier: "WeatherDetailController") as! WeatherDetailController
-//        dispvw.cityname = weatherArray[indexPath.row].city
-//        dispvw.temp = weatherArray[indexPath.row].temperature
-//        dispvw.img = weatherArray[indexPath.row].picture!
-//        self.navigationController?.pushViewController(dispvw, animated: true)
+        //The below method instantiates the WeatherDetailCOntroller view
+        let dispvw = storyboard?.instantiateViewController(withIdentifier: "WeatherDetailController") as! WeatherDetailController
+        //Putting in values of the selected row into the variables on the WeatherDetailController
+        dispvw.cityname = weatherArray[indexPath.row].city
+        dispvw.temp = weatherArray[indexPath.row].temperature
+        dispvw.img = weatherArray[indexPath.row].picture!
+        //Pushing all the values and WeatherDetailController as well to display on the screen
+        self.navigationController?.pushViewController(dispvw, animated: true)
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+
+    // Helps in deleting the items via UI
+    // User can Swipe any row on the right and delete it
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            weatherArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
+}
+
+
+    /* Another way of performing the above operations of assigning the values and calling the WeatherDetailController view
+        performSegue(withIdentifier: "transferdetails", sender: weatherArray[indexin])
+        override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         let guestuser = segue.destination as! WeatherDetailController
         guestuser.cityname = weatherArray[indexin].city
         guestuser.temp = weatherArray[indexin].temperature
         guestuser.img = weatherArray[indexin].picture!
-        indexin = 0
-    }
-    
-}
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        
     }
     */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

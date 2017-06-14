@@ -65,7 +65,7 @@
                                     <outlet property="CityName" destination="Kt1-qK-kdN" id="Abk-7R-7wr"/>
                                     <outlet property="ImageCell" destination="EDn-wP-FFt" id="zVf-nC-lr8"/>
                                     <outlet property="Temperature" destination="Gf4-lb-OkU" id="zBu-DH-QN3"/>
-                                    <segue destination="sM6-1J-Cko" kind="show" identifier="transferdetails" id="yCm-Eu-Dm5"/>
+                                    <segue destination="sM6-1J-Cko" kind="show" trigger="accessoryAction" id="h4e-m1-4qN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -139,6 +139,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nbS-Uj-NCM">
                             <connections>
                                 <action selector="Save:" destination="aB2-5Y-qWk" id="szw-6V-mUe"/>
+                                <segue destination="4YG-Q2-iSF" kind="unwind" unwindAction="unwindWithSender:" id="3R1-DB-2Sm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,6 +150,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7q-hg-dWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4YG-Q2-iSF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5115" y="-680.28169014084506"/>
         </scene>
@@ -199,11 +201,11 @@
                             <constraint firstAttribute="trailing" secondItem="OxL-Jb-BXH" secondAttribute="trailing" id="rO9-gP-blD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="X3n-b6-hnm"/>
                     <connections>
                         <outlet property="city" destination="SI7-qU-w60" id="Yy4-7E-eRj"/>
                         <outlet property="citypicture" destination="OxL-Jb-BXH" id="Xm6-BX-qTm"/>
                         <outlet property="temperature" destination="u87-kL-4pV" id="9EI-Hd-vcQ"/>
-                        <segue destination="8Y5-qs-GqF" kind="show" id="9X6-Cs-hZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-yb-WEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,7 +249,4 @@
             <point key="canvasLocation" x="4117.5" y="-680.28169014084506"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9X6-Cs-hZJ"/>
-    </inferredMetricsTieBreakers>
 </document>

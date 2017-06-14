@@ -9,18 +9,14 @@
 import UIKit
 
 class WeatherDetailController: UIViewController {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     @IBOutlet weak var citypicture: UIImageView!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var temperature: UILabel!
     
-    var cityname = ""
-    var temp = 0
+    //Initializing the variables and defining there types
+    var cityname = String()
+    var temp = Int()
     var img = UIImage()
     
     
@@ -28,7 +24,7 @@ class WeatherDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       //Assigning the values of the above variables set in the TableViewController here while loading this view
         city.text = cityname
         temperature.text = String(temp)
         citypicture.image = img
