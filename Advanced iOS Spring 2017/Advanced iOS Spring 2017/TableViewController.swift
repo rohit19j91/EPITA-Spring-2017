@@ -11,9 +11,11 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var weatherArray=[Weather]()
+    var indexin = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "orangetry")!)
 
         
         weatherArray.append(Weather(city:"Amsterdam",temperature:24, picture: UIImage(named: "image1"))!)
@@ -50,13 +52,12 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as?WeatherTableViewCell else {fatalError("error")}
+        cell.backgroundView = UIImageView(image: UIImage(named: "rowtry")!)
         cell.CityName?.text=weatherArray[indexPath.row].city
         cell.Temperature?.text=String(weatherArray[indexPath.row].temperature)
         cell.ImageCell.image = weatherArray[indexPath.row].picture
         return cell
         }
-    
-
     @IBAction func unwind(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? WeatherAdd, let weather=sourceViewController.weather
         {
@@ -67,8 +68,27 @@ class TableViewController: UITableViewController {
         }
     }
 
-}
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexin = indexPath.row
+        performSegue(withIdentifier: "transferdetails", sender: weatherArray[indexin])
 
+//        let dispvw = storyboard?.instantiateViewController(withIdentifier: "WeatherDetailController") as! WeatherDetailController
+//        dispvw.cityname = weatherArray[indexPath.row].city
+//        dispvw.temp = weatherArray[indexPath.row].temperature
+//        dispvw.img = weatherArray[indexPath.row].picture!
+//        self.navigationController?.pushViewController(dispvw, animated: true)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        let guestuser = segue.destination as! WeatherDetailController
+        guestuser.cityname = weatherArray[indexin].city
+        guestuser.temp = weatherArray[indexin].temperature
+        guestuser.img = weatherArray[indexin].picture!
+        indexin = 0
+    }
+    
+}
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
