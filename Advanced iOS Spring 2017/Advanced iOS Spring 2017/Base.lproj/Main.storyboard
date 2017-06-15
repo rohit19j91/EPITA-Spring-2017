@@ -166,7 +166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OxL-Jb-BXH">
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OxL-Jb-BXH">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI7-qU-w60">
@@ -195,10 +195,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OxL-Jb-BXH" firstAttribute="top" secondItem="yeK-m4-aqI" secondAttribute="bottom" id="NNq-Qr-8Xd"/>
-                            <constraint firstItem="Mno-3I-Xyn" firstAttribute="top" secondItem="OxL-Jb-BXH" secondAttribute="bottom" id="ULO-T3-lq2"/>
-                            <constraint firstItem="OxL-Jb-BXH" firstAttribute="leading" secondItem="iBv-er-LRb" secondAttribute="leading" id="YnQ-xt-sfa"/>
-                            <constraint firstAttribute="trailing" secondItem="OxL-Jb-BXH" secondAttribute="trailing" id="rO9-gP-blD"/>
+                            <constraint firstItem="OxL-Jb-BXH" firstAttribute="leading" secondItem="iBv-er-LRb" secondAttribute="leading" id="C8A-gl-5Qj"/>
+                            <constraint firstAttribute="trailing" secondItem="OxL-Jb-BXH" secondAttribute="trailing" id="K5L-ZM-Fzf"/>
+                            <constraint firstItem="OxL-Jb-BXH" firstAttribute="top" secondItem="yeK-m4-aqI" secondAttribute="bottom" id="iyu-P4-0jO"/>
+                            <constraint firstItem="Mno-3I-Xyn" firstAttribute="top" secondItem="OxL-Jb-BXH" secondAttribute="bottom" id="rKF-l0-u9j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X3n-b6-hnm"/>

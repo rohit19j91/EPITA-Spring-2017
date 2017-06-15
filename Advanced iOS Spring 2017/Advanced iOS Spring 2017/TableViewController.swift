@@ -99,6 +99,6 @@ class TableViewController: UITableViewController {
         guestuser.cityname = weatherArray[indexin].city
         guestuser.temp = weatherArray[indexin].temperature
         guestuser.img = weatherArray[indexin].picture!
-        
+ 
     }
     */

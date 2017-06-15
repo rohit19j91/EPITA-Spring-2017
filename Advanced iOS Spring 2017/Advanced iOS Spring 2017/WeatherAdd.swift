@@ -16,7 +16,7 @@ class WeatherAdd: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "orangetry")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundpages")!)
         // Do any additional setup after loading the view.
     }
 
@@ -50,7 +50,7 @@ class WeatherAdd: UIViewController {
         
         
             
-            weather = Weather(city: city!,temperature:temperature!, picture: UIImage(named: "image\(arc4random_uniform(3) + 1)" )!)
+            weather = Weather(city: city!,temperature:temperature!, picture: UIImage(named: "image\(arc4random_uniform(10) + 1)" )!)
     
    
 }
