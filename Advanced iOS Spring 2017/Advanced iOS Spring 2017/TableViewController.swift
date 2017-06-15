@@ -92,7 +92,7 @@ class TableViewController: UITableViewController {
 }
 
 
-    /* Another way of performing the above operations of assigning the values and calling the WeatherDetailController view
+    /* Another way of performing the above operations of assigning the values and calling the WeatherDetailController view after that
         performSegue(withIdentifier: "transferdetails", sender: weatherArray[indexin])
         override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         let guestuser = segue.destination as! WeatherDetailController
