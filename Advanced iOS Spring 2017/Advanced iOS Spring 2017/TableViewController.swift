@@ -18,11 +18,11 @@ class TableViewController: UITableViewController {
         tableView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundpages")!)
 
         
-        weatherArray.append(Weather(city:"Amsterdam",temperature:24, picture: UIImage(named: "image1"))!)
+        weatherArray.append(Weather(city:"Paris",temperature:24, picture: UIImage(named: "image1"))!)
         weatherArray.append(Weather(city:"Nice",temperature:30, picture: UIImage(named: "image3"))!)
         weatherArray.append(Weather(city:"Copenhagen",temperature:21, picture: UIImage(named: "image2"))!)
         weatherArray.append(Weather(city:"Berlin",temperature:20, picture: UIImage(named: "image4.jpeg"))!)
-        weatherArray.append(Weather(city:"Nice",temperature:18, picture: UIImage(named: "image5"))!)
+        weatherArray.append(Weather(city:"Amsterdam",temperature:18, picture: UIImage(named: "image5"))!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
